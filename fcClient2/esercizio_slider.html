@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- carica bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- carica jQuery (libreria javascript)  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="js/lib.js"></script>
+
+    <!-- carico il mio file di style (css) -->
+    <link href="css/mystyle.css" rel="stylesheet">
+
+    <style>
+        .foto {
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            z-index: 0;
+        }
+
+        #avanti {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+        }
+
+        #indietro {
+            position: absolute;
+            top: 60%;
+            left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+
+        <img id="uno" src="./img/gattino1.png" alt="" class="foto">
+        <img id="due" src="./img/gattino2.png" alt="" class="foto">
+        <img id="tre" src="./img/gattino3.png" alt="" class="foto">
+        <button id="indietro" onclick="indietro()">Indietro</button>
+        <button id="avanti" onclick="avanti()">Avanti</button>
+
+
+    </div>
+
+
+    <script>
+
+        init();
+        var lista = ["uno", "due", "tre"]
+        var i = 0;
+        var j = 0;
+        var index = 2; //perchè il primo ad essere visualizzato è il "tre"
+        var currentIndex = lista.length - 1;
+
+        function avanti() {
+            /* if(i>2){
+                  i=0;
+             }
+             document.getElementById(lista[i]).style.zIndex++;
+             j=i;
+             i++;*/
+            document.getElementById(lista[currentIndex]).style.zIndex--;
+            if (currentIndex == lista.length - 1) {
+                currentIndex = 0;
+            }
+            else {
+                currentIndex++;
+            }
+            document.getElementById(lista[currentIndex]).style.zIndex++;
+
+
+
+        }
+
+        function indietro() {
+            /*  if(j<0) {
+                  i=2;
+              }
+              document.getElementById(lista[j]).style.zIndex--;
+              i=j;
+              j--;*/
+            document.getElementById(lista[currentIndex]).style.zIndex--;
+            if (currentIndex == 0) {
+                currentIndex = lista.length - 1;
+            }
+            else {
+                currentIndex--;
+            }
+            document.getElementById(lista[currentIndex]).style.zIndex++;
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

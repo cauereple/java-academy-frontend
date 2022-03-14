@@ -1,0 +1,19 @@
+.testoMedio {
+    font-size: 2em;
+    color: #ab2626;
+}
+
+#titolo {
+    color: #c00;
+    padding: 20px;
+}
+
+#informazioni {
+    width: 100%;
+    /* float:right; */
+}
+
+.bordo_rosso {
+    border-color: red;
+    border-style:solid;
+}

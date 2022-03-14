@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- carica bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- carica jQuery (libreria javascript)  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="js/lib.js"></script>
+
+    <!-- carico il mio file di style (css) -->
+    <link href="css/mystyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        <br>
+        <form method="get" name="miomodulo">
+            <table border="1" cellpadding="5" cellspacing="5">
+                <tr>
+                    <td>
+                        <select name="menu1" id="s1" size="10" multiple>
+                            <option value="">Pechinese</option>
+                            <option value="">Labrador</option>
+                            <option value="">Shiba</option>
+                            <option value="">Pastore Tedesco</option>
+                            <option value="">Border Collie</option>
+                            <option value="">Pastore Australiano</option>
+                            <option value="">Pastore Maremmano</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="menu2" id="s2" size="10" multiple>
+                            <option value="">caneeeeeeeeeeeeeee</option>
+                            <option value="">caneeeeeeeeeeeeeee</option>
+                            <option value="">caneeeeeeeeeeeeeee</option>
+                            <option value="">caneeeeeeeeeeeeeee4</option>
+                            <option value="">ccaneeeeeeeeeeeeeeee5</option>
+                            <option value="">ccaneeeeeeeeeeeeeee6</option>
+                            <option value="">caneeeeeeeeeeeeeeee7</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p align="center"><input type="button" value=">>>" onclick="spostaOpzioni(m1,m2)"></p>
+                    </td>
+                    <td>
+                        <p align="center"> <input type="button" value="<<<" onclick="spostaOpzioni(m2,m1)"></p>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+
+    </div>
+
+
+    <script>
+        init();
+        var m1 = document.miomodulo.menu1           // EQUIVALENTE A var m1=document.getElementById("s1")
+        var m2 = document.miomodulo.menu2           // EQUIVALENTE A var m2=document.getElementById("s2")
+
+
+        console.log(m1)
+        console.log(m2)
+        function spostaOpzioni(daM, aM) {
+            //daM.length per vedere quante opzioni ci sono
+            //daM.option[i].selected per vedere se il primo elemento è stato selezionato
+            //option[i]=null per eliminare una opzione
+            //aM.option[aM.length]=new Option(daM.otions[].text)
+            for (i = daM.length - 1; i >= 0; i--) {
+                if (daM.options[i].selected) {
+                    aM.options[aM.length] = new Option(daM.options[i].text)
+                    daM.options[i] = null
+                }
+
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

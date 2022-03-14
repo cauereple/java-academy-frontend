@@ -1,0 +1,55 @@
+<!-- menu di navigazione -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand" href="index.html">HOME</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="utenti.html">Utenti</a>
+        </li>
+
+        <li class="nav-item dropdown d-flex ">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Pannello
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Gestione Ordini</a></li>
+            <li><a class="dropdown-item" href="#">Gestione Articoli</a></li>
+          </ul>
+        </li>
+
+
+        <li class="nav-item dropdown d-flex ">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Esercizi
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="esercizio_array_immagini.html">Array di immagini</a></li>
+            <li><a class="dropdown-item" href="esercizio_tabellina.html">Tabelline</a></li>
+            <li><a class="dropdown-item" href="esercizio_slider.html">Slider di immagini</a></li>
+            <li><a class="dropdown-item" href="scritta_scorrevole.html">Scritta scorrevole</a></li>
+            <li><a class="dropdown-item" href="esercizio_select.html">Select</a></li>
+            <!-- <li><a class="dropdown-item" href="login.html">Login</a></li> -->
+          </ul>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+        </li>     
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login.html" onclick="localStorage.setItem('loggato', '0') ">Logout</a>
+        </li>   
+
+
+
+      </ul>
+    </div>
+  </div>
+
+</nav>

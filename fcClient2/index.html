@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- carica bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- carico il mio file di style (css) -->
+    <link href="css/mystyle.css" rel="stylesheet">
+
+    <!-- carico la mia libreia javascript -->
+    <script src="js/lib.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- html è composto da tag block-level (alla chiusura del tag il cursore va a capo) e tag in-line -->
+
+        <header></header>
+
+        <div id = menu></div>
+
+        <h1 id="titolo">HOME PAGE</h1>
+
+        <img src="img/flights.svg">
+
+        <div id="informazioni">
+            <p class="testoMedio">Lorem ipsum dolor città sit amet &egrave; consectetur adipisicing elit. <br>
+                Tenetur laudantium et autem commodi velit quisquam! Labore fuga aliquam itaque
+                dolorem libero consequuntur suscipit. Nesciunt, nemo. Et accusamus tempore inventore ad?</p>
+
+            <!-- commento riga singola 
+                
+                o multirga
+            
+            -->
+
+            <p class="testoMedio">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur labore vitae fuga tenetur facilis. Quo architecto, voluptatem maiores quisquam
+                repellat accusamus deserunt, non explicabo modi, distinctio rerum qui minus laudantium!.</p>
+        </div>
+
+        <footer></footer>
+
+    </div>
+
+    
+    <script>
+        // la funzione init si trova in lib.js e inserisce nel tag <header> il contenuto di menu.html
+        init(); 
+    </script>
+
+</body>
+
+</html>
